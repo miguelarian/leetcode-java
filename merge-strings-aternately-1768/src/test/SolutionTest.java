@@ -38,4 +38,13 @@ public class SolutionTest {
 
         assertEquals("a1", result);
     }
+
+    @Test
+    public void twoWordsWithTwoLetters_return_alternateLetters() {
+        String word1 = "ab", word2 = "12";
+
+        String result = Solution.mergeAlternately(word1, word2);
+
+        assertEquals("a1b2", result);
+    }
 }
