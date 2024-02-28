@@ -47,4 +47,13 @@ public class SolutionTest {
 
         assertEquals("a1b2", result);
     }
+
+    @Test
+    public void twoLargeWordsSameSize_return_alternateLetters() {
+        String word1 = "abcd", word2 = "1234";
+
+        String result = Solution.mergeAlternately(word1, word2);
+
+        assertEquals("a1b2c3d4", result);
+    }
 }
