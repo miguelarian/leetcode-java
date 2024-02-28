@@ -4,6 +4,11 @@ public class Solution {
         if(word1.isEmpty()) {
             return word2;
         }
+
+        if(word2.isEmpty()) {
+            return word1;
+        }
+
         return "";
     }
 }
