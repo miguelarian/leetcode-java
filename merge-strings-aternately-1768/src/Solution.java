@@ -9,6 +9,6 @@ public class Solution {
             return word1;
         }
 
-        return "";
+        return word1 + word2;
     }
 }
