@@ -1,5 +1,6 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {
     @Test
@@ -8,7 +9,7 @@ public class SolutionTest {
 
         String result = Solution.mergeAlternately(word1, word2);
 
-        Assertions.assertEquals("", result);
+        assertEquals("", result);
     }
 
     @Test
@@ -17,6 +18,6 @@ public class SolutionTest {
 
         String result = Solution.mergeAlternately(word1, word2);
 
-        Assertions.assertEquals("123", result);
+        assertEquals("123", result);
     }
 }
