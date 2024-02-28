@@ -20,4 +20,13 @@ public class SolutionTest {
 
         assertEquals("123", result);
     }
+
+    @Test
+    public void noEmptyWord1_and_emptyWord2_return_word2() {
+        String word1 = "abc", word2 = "";
+
+        String result = Solution.mergeAlternately(word1, word2);
+
+        assertEquals("abc", result);
+    }
 }
