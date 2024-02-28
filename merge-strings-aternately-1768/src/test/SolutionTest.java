@@ -29,4 +29,13 @@ public class SolutionTest {
 
         assertEquals("abc", result);
     }
+
+    @Test
+    public void twoWordsWithSingleLetter_return_bothLetters() {
+        String word1 = "a", word2 = "1";
+
+        String result = Solution.mergeAlternately(word1, word2);
+
+        assertEquals("a1", result);
+    }
 }
