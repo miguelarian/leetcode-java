@@ -56,4 +56,13 @@ public class SolutionTest {
 
         assertEquals("a1b2c3d4", result);
     }
+
+    @Test
+    public void twoLargeWordsDifferentSize_return_mergeAndLargestSuffix() {
+        String word1 = "abc", word2 = "12345";
+
+        String result = Solution.mergeAlternately(word1, word2);
+
+        assertEquals("a1b2c345", result);
+    }
 }
