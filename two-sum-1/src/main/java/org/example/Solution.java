@@ -12,8 +12,8 @@ public class Solution {
         }
 
         for(int firstIndex = 0; firstIndex < nums.length; firstIndex++) {
-            int fistOperator = nums[firstIndex];
-            int secondOperator = target - fistOperator;
+            int firstOperator = nums[firstIndex];
+            int secondOperator = target - firstOperator;
             if(numsAndIndexes.containsKey((secondOperator)))
             {
                 int secondIndex = numsAndIndexes.get(secondOperator);
