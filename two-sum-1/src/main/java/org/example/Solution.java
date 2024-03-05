@@ -1,21 +1,29 @@
 package org.example;
 
+import java.util.HashMap;
+
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
 
-        int[] result =  new int[2];
-        boolean resolved = false;
+        HashMap<Integer, Integer> numsAndIndexes = new HashMap<>();
 
-        for(int i = 0; i < nums.length && !resolved; i++) {
-            for(int j = 0; j < nums.length&& !resolved; j++) {
-                if(i != j && nums[i] + nums[j] == target) {
-                    result[0] = i;
-                    result[1] = j;
-                    resolved = true;
+        for(int i = 0; i < nums.length; i++) {
+            numsAndIndexes.put(nums[i], i);
+        }
+
+        for(int firstIndex = 0; firstIndex < nums.length; firstIndex++) {
+            int fistOperator = nums[firstIndex];
+            int secondOperator = target - fistOperator;
+            if(numsAndIndexes.containsKey((secondOperator)))
+            {
+                int secondIndex = numsAndIndexes.get(secondOperator);
+                if (secondIndex == firstIndex) {
+                    continue;
                 }
+                return new int[] { firstIndex, secondIndex };
             }
         }
 
-        return result;
+        return null;
     }
 }
