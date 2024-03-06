@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class SolutionTest {
     @Test
-    public void twoSum_sameNumberTwice() {
+    public void twoSum_sameNumberTwice_validResult() {
         int[] nums = { 3, 3 };
         int target = 6;
 
@@ -16,7 +16,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void twoSum_threeDifferentNumbers() {
+    public void twoSum_threeDifferentNumbers_validResult() {
         int[] nums = { 3,  2,  4 };
         int target = 6;
 
@@ -28,7 +28,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void twoSum_fourDifferentNumbers() {
+    public void twoSum_fourDifferentNumbers_validResult() {
         int[] nums = { 2,7,11,15 };
         int target = 9;
 
