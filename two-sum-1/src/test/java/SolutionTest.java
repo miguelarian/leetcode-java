@@ -2,8 +2,6 @@ import org.example.Solution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 public class SolutionTest {
     @Test
     public void twoSum_sameNumberTwice() {
@@ -14,7 +12,7 @@ public class SolutionTest {
         var result = s.twoSum(nums,target);
 
         int[] expected = {0, 1};
-        Assertions.assertEquals(Arrays.toString(expected), Arrays.toString(result));
+        Assertions.assertArrayEquals(expected, result, "The result is wrong");
     }
 
     @Test
@@ -26,7 +24,7 @@ public class SolutionTest {
         var result = s.twoSum(nums,target);
 
         int[] expected = {1, 2};
-        Assertions.assertEquals(Arrays.toString(expected), Arrays.toString(result));
+        Assertions.assertArrayEquals(expected, result, "The result is wrong");
     }
 
     @Test
@@ -38,6 +36,6 @@ public class SolutionTest {
         var result = s.twoSum(nums,target);
 
         int[] expected = {0, 1};
-        Assertions.assertEquals(Arrays.toString(expected), Arrays.toString(result));
+        Assertions.assertArrayEquals(expected, result, "The result is wrong");
     }
 }
