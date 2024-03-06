@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class SolutionTest {
     @Test
-    public void twoSum_sameNumberTwice_Test() {
+    public void twoSum_sameNumberTwice() {
         int[] nums = { 3, 3 };
         int target = 6;
 
@@ -18,7 +18,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void twoSum_threeDiffrentNumbers_Test() {
+    public void twoSum_threeDifferentNumbers() {
         int[] nums = { 3,  2,  4 };
         int target = 6;
 
@@ -30,7 +30,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void twoSum_fourDifferentNumbers_Test() {
+    public void twoSum_fourDifferentNumbers() {
         int[] nums = { 2,7,11,15 };
         int target = 9;
 
