@@ -5,9 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 public class SolutionTest {
-
     @Test
-    public void twoSum_test1_Test() {
+    public void twoSum_sameNumberTwice_Test() {
         int[] nums = { 3, 3 };
         int target = 6;
 
@@ -19,7 +18,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void twoSum_test2_Test() {
+    public void twoSum_threeDiffrentNumbers_Test() {
         int[] nums = { 3,  2,  4 };
         int target = 6;
 
@@ -31,7 +30,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void twoSum_test3_Test() {
+    public void twoSum_fourDifferentNumbers_Test() {
         int[] nums = { 2,7,11,15 };
         int target = 9;
 
