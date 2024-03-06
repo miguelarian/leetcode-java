@@ -38,4 +38,14 @@ public class SolutionTest {
         int[] expected = {0, 1};
         Assertions.assertArrayEquals(expected, result, "The result is wrong");
     }
+    @Test
+    public void twoSum_impossibleOperation_null() {
+        int[] nums = { 1,2,3 };
+        int target = -1;
+
+        Solution s  = new Solution();
+        var result = s.twoSum(nums,target);
+
+        Assertions.assertNull(result, "The sum should not be possible");
+    }
 }
