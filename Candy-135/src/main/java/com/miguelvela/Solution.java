@@ -5,9 +5,9 @@ public class Solution {
 
         int result = 0;
 
-        for(int rate : ratings)
+        for(int i = 0; i < ratings.length; i++)
         {
-            result++;
+            result += 1;
         }
 
         return result;
