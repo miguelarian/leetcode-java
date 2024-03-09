@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class SolutionTest {
 
     @Test
-    public void candy_noRating_zero() {
+    public void candy_noRating_returnsZero() {
 
         int[] ratings = {};
 
@@ -18,7 +18,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void candy_oneChild_one() {
+    public void candy_oneChild_returnsOne() {
 
         int[] ratings = {10};
 
@@ -28,7 +28,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void candy_threeChildrenSameRating_three() {
+    public void candy_threeChildrenSameRating_returnsThree() {
 
         int[] ratings = {0,0,0};
 
@@ -38,7 +38,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void candy_threeChildrenDifferentRating_four() {
+    public void candy_threeChildrenDifferentRating_returnsFour() {
 
         int[] ratings = {0,1,0};
 
