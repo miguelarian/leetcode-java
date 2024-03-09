@@ -33,3 +33,7 @@ n == ratings.length
 1 <= n <= 2 * 104
 0 <= ratings[i] <= 2 * 104
 ```
+
+## Source
+
+[Leetcode 189 - Candy](https://leetcode.com/problems/candy/description/?envType=study-plan-v2&envId=top-interview-150)
