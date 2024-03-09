@@ -3,13 +3,17 @@ package com.miguelvela;
 public class Solution {
     public static int candy(int[] ratings) {
 
-        int result = 0;
+        int totalCandies = 0;
 
         for(int i = 0; i < ratings.length; i++)
         {
-            result += 1;
+            int minimumCandyGiven = 1;
+            int rate = ratings[i];
+            int highScoreCandies = 0;
+
+            totalCandies += minimumCandyGiven + highScoreCandies;
         }
 
-        return result;
+        return totalCandies;
     }
 }
