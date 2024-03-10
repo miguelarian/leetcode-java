@@ -6,7 +6,7 @@ public class Solution {
         int totalChildren = ratings.length;
         int minimumCandiesGiven = 1;
 
-        // only one child
+        // less than two children, no need to compare
         if (totalChildren < 2) {
             return totalChildren;
         }
