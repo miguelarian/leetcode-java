@@ -8,10 +8,16 @@ public class Solution {
 
         List<String> result = new ArrayList<>();
         for (int number = 1; number <= n; number++) {
-            if(number % 3 == 0) {
+            if(number % 3 == 0)
+            {
                 result.add("Fizz");
             }
-            else {
+            else if(number % 5 == 0)
+            {
+                result.add("Buzz");
+            }
+            else
+            {
                 result.add(String.valueOf(number));
             }
         }

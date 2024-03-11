@@ -48,4 +48,14 @@ public class SolutionTest {
 
         assertEquals(result, expected);
     }
+
+    @Test
+    public void fizzBuzz_nIs5_returns1_2_Fizz_4_Buzz() {
+
+        var expected = new ArrayList<>(List.of("1", "2", "Fizz", "4", "Buzz"));
+
+        var result = Solution.fizzBuzz(5);
+
+        assertEquals(result, expected);
+    }
 }
