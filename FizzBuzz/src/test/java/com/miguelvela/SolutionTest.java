@@ -58,4 +58,14 @@ public class SolutionTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void fizzBuzz_nIs15_returnsNumbers_Fizz_Buzz_FizzBuzz() {
+
+        var expected = new ArrayList<>(List.of("1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"));
+
+        var result = Solution.fizzBuzz(15);
+
+        assertEquals(expected, result);
+    }
 }
