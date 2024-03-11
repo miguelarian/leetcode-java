@@ -11,6 +11,9 @@ public class Solution {
             if (number < 3) {
                 result.add(String.valueOf(number));
             }
+            if(number % 3 == 0) {
+                result.add("Fizz");
+            }
         }
 
         return result;
