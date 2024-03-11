@@ -14,6 +14,11 @@ public class Solution {
         modules.put(5, "Buzz");
         modules.put(7, "Alan");
     }
+
+    private static boolean isDivisible(int number, int divisor) {
+        return number % divisor == 0;
+    }
+
     public static List<String> fizzBuzz(int n) {
 
         initialiseModules();
@@ -26,7 +31,7 @@ public class Solution {
             for (Map.Entry<Integer, String> entry : modules.entrySet()) {
                 int module = entry.getKey();
 
-                if(number % module == 0) {
+                if(isDivisible(number, module)) {
                     wordBuilder.append(entry.getValue());
                 }
             }
