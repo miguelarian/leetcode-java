@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SolutionTest {
 
     @Test
-    public void fizzBuzz_with1_returns1() {
+    public void fizzBuzz_nIs1_returns1() {
 
         var expected = new ArrayList<>(List.of("1"));
 
@@ -20,7 +20,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void fizzBuzz_with2_returns1_2() {
+    public void fizzBuzz_nIs2_returns1_2() {
 
         var expected = new ArrayList<>(List.of("1", "2"));
 
