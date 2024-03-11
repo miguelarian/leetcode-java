@@ -16,7 +16,7 @@ public class SolutionTest {
 
         var result = Solution.fizzBuzz(1);
 
-        assertEquals(result, expected);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class SolutionTest {
 
         var result = Solution.fizzBuzz(2);
 
-        assertEquals(result, expected);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class SolutionTest {
 
         var result = Solution.fizzBuzz(3);
 
-        assertEquals(result, expected);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class SolutionTest {
 
         var result = Solution.fizzBuzz(4);
 
-        assertEquals(result, expected);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -56,6 +56,6 @@ public class SolutionTest {
 
         var result = Solution.fizzBuzz(5);
 
-        assertEquals(result, expected);
+        assertEquals(expected, result);
     }
 }
