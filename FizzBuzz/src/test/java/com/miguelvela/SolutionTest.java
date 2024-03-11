@@ -60,9 +60,9 @@ public class SolutionTest {
     }
 
     @Test
-    public void fizzBuzz_nIs15_returnsNumbers_Fizz_Buzz_FizzBuzz() {
+    public void fizzBuzz_nIs15_returnsNumbers_Fizz_Buzz_Alan_FizzBuzz() {
 
-        var expected = new ArrayList<>(List.of("1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"));
+        var expected = new ArrayList<>(List.of("1","2","Fizz","4","Buzz","Fizz","Alan","8","Fizz","Buzz","11","Fizz","13","Alan","FizzBuzz"));
 
         var result = Solution.fizzBuzz(15);
 

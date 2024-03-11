@@ -11,6 +11,7 @@ public class Solution {
         HashMap<Integer, String> modules = new HashMap<>();
         modules.put(3, "Fizz");
         modules.put(5, "Buzz");
+        modules.put(7, "Alan");
 
         List<String> result = new ArrayList<>();
         for (int number = 1; number <= n; number++)
