@@ -9,6 +9,16 @@ public class Solution {
 
     private static final HashMap<Integer, String> modules = new HashMap<>();
 
+    private static void initialiseModules() {
+        modules.put(3, "Fizz");
+        modules.put(5, "Buzz");
+        modules.put(7, "Alan");
+    }
+
+    private static boolean isDivisible(int number, int divisor) {
+        return number % divisor == 0;
+    }
+
     public static List<String> fizzBuzz(int n) {
 
         initialiseModules();
@@ -18,39 +28,21 @@ public class Solution {
         {
             StringBuilder wordBuilder = new StringBuilder();
 
-            updateWithWords(number, wordBuilder);
+            for (Map.Entry<Integer, String> entry : modules.entrySet()) {
+                int divisor = entry.getKey();
 
-            updateWithNumbers(number, wordBuilder);
+                if(isDivisible(number, divisor)) {
+                    wordBuilder.append(entry.getValue());
+                }
+            }
+            if(wordBuilder.isEmpty())
+            {
+                wordBuilder.append(number);
+            }
 
             result.add(wordBuilder.toString());
         }
 
         return result;
-    }
-
-    private static void updateWithNumbers(int number, StringBuilder wordBuilder) {
-        if(wordBuilder.isEmpty())
-        {
-            wordBuilder.append(number);
-        }
-    }
-
-    private static void updateWithWords(int number, StringBuilder wordBuilder) {
-        for (Map.Entry<Integer, String> entry : modules.entrySet()) {
-            int divisor = entry.getKey();
-
-            if(isDivisible(number, divisor)) {
-                wordBuilder.append(entry.getValue());
-            }
-        }
-    }
-    private static void initialiseModules() {
-        modules.put(3, "Fizz");
-        modules.put(5, "Buzz");
-        modules.put(7, "Alan");
-    }
-
-    private static boolean isDivisible(int number, int divisor) {
-        return number % divisor == 0;
     }
 }
