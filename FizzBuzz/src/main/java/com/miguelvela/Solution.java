@@ -29,9 +29,9 @@ public class Solution {
             StringBuilder wordBuilder = new StringBuilder();
 
             for (Map.Entry<Integer, String> entry : modules.entrySet()) {
-                int module = entry.getKey();
+                int divisor = entry.getKey();
 
-                if(isDivisible(number, module)) {
+                if(isDivisible(number, divisor)) {
                     wordBuilder.append(entry.getValue());
                 }
             }
