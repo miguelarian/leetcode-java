@@ -6,12 +6,17 @@ import java.util.List;
 import java.util.Map;
 
 public class Solution {
-    public static List<String> fizzBuzz(int n) {
 
-        HashMap<Integer, String> modules = new HashMap<>();
+    private static final HashMap<Integer, String> modules = new HashMap<>();
+
+    private static void initialiseModules() {
         modules.put(3, "Fizz");
         modules.put(5, "Buzz");
         modules.put(7, "Alan");
+    }
+    public static List<String> fizzBuzz(int n) {
+
+        initialiseModules();
 
         List<String> result = new ArrayList<>();
         for (int number = 1; number <= n; number++)
