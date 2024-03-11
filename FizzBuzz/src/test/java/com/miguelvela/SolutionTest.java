@@ -18,4 +18,14 @@ public class SolutionTest {
 
         assertEquals(result, expected);
     }
+
+    @Test
+    public void fizzBuzz_with2_returns1_2() {
+
+        var expected = new ArrayList<>(List.of("1", "2"));
+
+        var result = Solution.fizzBuzz(2);
+
+        assertEquals(result, expected);
+    }
 }
