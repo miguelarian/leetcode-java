@@ -8,11 +8,11 @@ public class Solution {
 
         List<String> result = new ArrayList<>();
         for (int number = 1; number <= n; number++) {
-            if (number < 3) {
-                result.add(String.valueOf(number));
-            }
             if(number % 3 == 0) {
                 result.add("Fizz");
+            }
+            else {
+                result.add(String.valueOf(number));
             }
         }
 
