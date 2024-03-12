@@ -29,4 +29,15 @@ public class SolutionTest {
 
         assertThat("The needle is present", index, Is.is(0));
     }
+
+    @Test
+    public void strStr_needle_longer_than_haystack_returns_minusOne() {
+
+        String haystack = "hello";
+        String needle = "world!!!";
+
+        int index = strStr(haystack, needle);
+
+        assertThat("The needle is not present", index, Is.is(-1));
+    }
 }
