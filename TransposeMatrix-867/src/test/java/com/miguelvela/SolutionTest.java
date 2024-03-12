@@ -18,4 +18,42 @@ public class SolutionTest {
 
         assertThat(result, Is.is(expected));
     }
+
+    @Test
+    public void transpose_2x2_2x2() {
+
+        int[][] matrix = {
+            { 1, 2 },
+            { 1, 2 }
+        };
+
+        int[][] result = transpose(matrix);
+
+        int[][] expected = {
+                { 1, 1 },
+                { 2, 2 }
+        };
+
+        assertThat(result, Is.is(expected));
+    }
+
+    @Test
+    public void transpose_3x3_3x3() {
+
+        int[][] matrix = {
+                { 1, 2, 3 },
+                { 1, 2, 3 },
+                { 1, 2, 3 }
+        };
+
+        int[][] result = transpose(matrix);
+
+        int[][] expected = {
+                { 1, 1, 1 },
+                { 2, 2, 2 },
+                { 3, 3, 3 }
+        };
+
+        assertThat(result, Is.is(expected));
+    }
 }
