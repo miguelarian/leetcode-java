@@ -9,10 +9,19 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class SolutionTest {
 
     @Test
+    public void fib_0_0() {
+        int number = 0;
+
+        int result = fib(number);
+
+        assertThat("The result is wrong", result, Is.is(0));
+    }
+
+    @Test
     public void fib_1_1() {
         int number = 1;
 
-        int result = fib(1);
+        int result = fib(number);
 
         assertThat("The result is wrong", result, Is.is(1));
     }
