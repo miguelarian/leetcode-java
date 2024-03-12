@@ -75,4 +75,25 @@ public class SolutionTest {
 
         assertThat(result, Is.is(expected));
     }
+
+    @Test
+    public void transpose_1x6_6x1() {
+
+        int[][] matrix = {
+                { 1, 2, 3, 4, 5, 6 },
+        };
+
+        int[][] result = transpose(matrix);
+
+        int[][] expected = {
+                { 1 },
+                { 2 },
+                { 3 },
+                { 4 },
+                { 5 },
+                { 6 }
+        };
+
+        assertThat(result, Is.is(expected));
+    }
 }
