@@ -4,11 +4,19 @@ public class Solution {
 
     public static boolean isPalindrome(int number) {
 
+        if(number < 0) {
+            return false;
+        }
+
         char[] digits = Integer.toString(number).toCharArray();
 
-        for(int i = 0, j = digits.length-1; i < digits.length && j >= 0 && i < j; i++, j--)
-        {
-            if(digits[i] != digits[j]) {
+        int numberLength = digits.length;
+
+        for(int leftPointer=0; leftPointer < numberLength/2; leftPointer++) {
+
+            int rightPointer = numberLength - leftPointer - 1;
+
+            if(digits[leftPointer] != digits[rightPointer]) {
                 return false;
             }
         }
