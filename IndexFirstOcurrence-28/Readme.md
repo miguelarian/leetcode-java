@@ -28,3 +28,5 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 1 <= haystack.length, needle.length <= 104
 haystack and needle consist of only lowercase English characters.
 ```
+
+[Source](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/)
