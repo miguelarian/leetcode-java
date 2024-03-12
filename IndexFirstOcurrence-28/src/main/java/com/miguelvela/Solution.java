@@ -11,6 +11,32 @@ public class Solution {
             return 0;
         }
 
+        for (int haystackIndex = 0; haystackIndex < haystack.length(); haystackIndex++)
+        {
+            int slowPointer = haystackIndex;
+            int fastPointer = 0;
+            boolean isContained = false;
+
+            do
+            {
+                if (haystack.charAt(slowPointer) == needle.charAt(fastPointer))
+                {
+                    isContained = true;
+                    fastPointer++;
+                    slowPointer++;
+                }
+                else
+                {
+                    isContained = false;
+                }
+
+            } while(isContained && fastPointer < needle.length());
+
+            if(isContained)
+            {
+                return haystackIndex;
+            }
+        }
 
         return -1;
     }

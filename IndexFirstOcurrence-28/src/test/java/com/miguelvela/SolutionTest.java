@@ -40,4 +40,15 @@ public class SolutionTest {
 
         assertThat("The needle is not present", index, Is.is(-1));
     }
+
+    @Test
+    public void strStr_needle_one_occurrence_at_beginning_haystack_returns_zero() {
+
+        String haystack = "hello";
+        String needle = "hell";
+
+        int index = strStr(haystack, needle);
+
+        assertThat("The needle is present", index, Is.is(0));
+    }
 }
