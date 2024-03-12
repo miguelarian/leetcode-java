@@ -9,7 +9,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class SolutionTest {
 
     @Test
-    public void strStr_needle_not_present_minusOne() {
+    public void strStr_needle_not_present_returns_minusOne() {
 
         String haystack = "this_is_a_test";
         String needle = "none";
@@ -20,7 +20,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void strStr_needle_haystack_same_word_zero() {
+    public void strStr_needle_haystack_same_word_returns_zero() {
 
         String haystack = "this_is_a_test";
         String needle = "this_is_a_test";
