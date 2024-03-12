@@ -51,4 +51,15 @@ public class SolutionTest {
 
         assertThat("The needle is present", index, Is.is(0));
     }
+
+    @Test
+    public void strStr_needle_one_occurrence_at_middle_haystack_returns_five() {
+
+        String haystack = "hello_mike_test";
+        String needle = "mike";
+
+        int index = strStr(haystack, needle);
+
+        assertThat("The needle is present", index, Is.is(6));
+    }
 }
