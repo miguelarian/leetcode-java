@@ -11,7 +11,7 @@ public class Solution {
             return 0;
         }
 
-        for (int haystackIndex = 0; haystackIndex < haystack.length(); haystackIndex++)
+        for (int haystackIndex = 0; haystackIndex < haystack.length()-needle.length(); haystackIndex++)
         {
             int slowPointer = haystackIndex;
             int fastPointer = 0;
