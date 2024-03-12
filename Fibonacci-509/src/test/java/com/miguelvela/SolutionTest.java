@@ -25,4 +25,13 @@ public class SolutionTest {
 
         assertThat("The result is wrong", result, Is.is(1));
     }
+
+    @Test
+    public void fib_2_1() {
+        int number = 2;
+
+        int result = fib(number);
+
+        assertThat("The result is wrong", result, Is.is(1));
+    }
 }
