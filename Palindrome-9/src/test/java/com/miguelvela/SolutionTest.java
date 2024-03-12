@@ -25,4 +25,13 @@ class SolutionTest {
 
         assertThat("The number should be palindrome", result, Is.is(false));
     }
+
+    @Test
+    void isPalindrome_twoEqualDigits_returnsTrue() {
+        int number = 11;
+
+        boolean result = isPalindrome(number);
+
+        assertThat("The number should be palindrome", result, Is.is(true));
+    }
 }
