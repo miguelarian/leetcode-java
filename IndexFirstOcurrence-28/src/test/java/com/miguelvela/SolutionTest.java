@@ -73,4 +73,15 @@ public class SolutionTest {
 
         assertThat("The needle is not present", index, Is.is(-1));
     }
+
+    @Test
+    public void strStr_needle_end_of_haystack_returns_two() {
+
+        String haystack = "abc";
+        String needle = "c";
+
+         int index = strStr(haystack, needle);
+
+        assertThat("The needle is present", index, Is.is(2));
+    }
 }
