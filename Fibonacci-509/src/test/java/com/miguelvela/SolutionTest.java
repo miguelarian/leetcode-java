@@ -34,4 +34,49 @@ public class SolutionTest {
 
         assertThat("The result is wrong", result, Is.is(1));
     }
+
+    @Test
+    public void fib_3_2() {
+        int number = 3;
+
+        int result = fib(number);
+
+        assertThat("The result is wrong", result, Is.is(2));
+    }
+
+    @Test
+    public void fib_4_3() {
+        int number = 4;
+
+        int result = fib(number);
+
+        assertThat("The result is wrong", result, Is.is(3));
+    }
+
+    @Test
+    public void fib_5_5() {
+        int number = 5;
+
+        int result = fib(number);
+
+        assertThat("The result is wrong", result, Is.is(5));
+    }
+
+    @Test
+    public void fib_6_5() {
+        int number = 6;
+
+        int result = fib(number);
+
+        assertThat("The result is wrong", result, Is.is(8));
+    }
+
+    @Test
+    public void fib_7_13() {
+        int number = 7;
+
+        int result = fib(number);
+
+        assertThat("The result is wrong", result, Is.is(13));
+    }
 }
