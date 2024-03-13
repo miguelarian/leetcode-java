@@ -29,3 +29,5 @@ Output: true
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109
 ```
+
+[Source](https://leetcode.com/problems/contains-duplicate/solutions/)
