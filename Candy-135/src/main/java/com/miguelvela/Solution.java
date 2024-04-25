@@ -1,51 +1,41 @@
 package com.miguelvela;
 
+import java.util.Arrays;
+
 public class Solution {
     public static int candy(int[] ratings) {
+        int n = ratings.length;
 
-        int totalChildren = ratings.length;
-        int minimumCandiesGiven = 1;
-
-        // less than two children, no need to compare
-        if (totalChildren < 2) {
-            return totalChildren;
+        // Special case: if all ratings are 0, each child gets one candy
+        if (Arrays.stream(ratings).sum() == 0) {
+            return n;
         }
 
-        // many children, all of them receive at least minimumCandiesGiven
-        int[] candiesGiven = new int[totalChildren];
-        for (int i = 0; i < totalChildren; i++) {
-            candiesGiven[i] = minimumCandiesGiven;
-        }
+        int[] candiesGiven = new int[n];
 
-        // first pass giving candies comparing left neighbours
-        for(int currentChild = 1; currentChild < totalChildren; currentChild++)
-        {
-            int rate = ratings[currentChild];
-            if(rate > ratings[currentChild - 1]) {
-                candiesGiven[currentChild] = 1 + candiesGiven[currentChild - 1];
+        // Initially assign one candy to each child
+        Arrays.fill(candiesGiven, 1);
+
+        // Iterate from left to right, updating the number of candies based on ratings
+        for (int i = 1; i < n; i++) {
+            if (ratings[i] > ratings[i - 1]) {
+                candiesGiven[i] = candiesGiven[i - 1] + 1;
             }
         }
 
-        // second pass giving candies comparing right neighbours
-        for (int currentChild = totalChildren - 2; currentChild >= 0; currentChild--) {
-            int rate = ratings[currentChild];
-            if(rate > ratings[currentChild + 1]) {
-                candiesGiven[currentChild] = Math.max(candiesGiven[currentChild], 1 + candiesGiven[currentChild + 1]);
+        // Iterate from right to left, update the number of candies considering ratings and already assigned candies
+        for (int i = n - 2; i >= 0; i--) {
+            if (ratings[i] > ratings[i + 1]) {
+                candiesGiven[i] = Math.max(candiesGiven[i], candiesGiven[i + 1] + 1);
             }
         }
 
-        return getTotalCandies(candiesGiven);
-    }
-
-    private static int getTotalCandies(int[] candies) {
-
-        int totalCandies = 0;
-
-        for(int i = 0; i < candies.length; i++)
-        {
-            totalCandies += candies[i];
+        // Sum up the candies array to get the total minimum number of candies needed
+        int sum = 0;
+        for (int candy : candiesGiven) {
+            sum += candy;
         }
 
-        return totalCandies;
+        return sum;
     }
 }

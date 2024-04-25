@@ -66,4 +66,14 @@ public class SolutionTest {
 
         assertThat(result, equalTo(4));
     }
+
+    @Test
+    public void candy_threeChildrenThreeDifferentRating_returnsSix() {
+
+        int[] ratings = {2,3,5};
+
+        int result = Solution.candy(ratings);
+
+        assertThat(result, equalTo(6));
+    }
 }
